@@ -20,7 +20,6 @@ body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
 }
 
-/* Custom Styles for Table */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -41,8 +40,6 @@ tbody tr:hover {
   background-color: #f4f5fd;
 }
 
-
-/* For the search input field */
 input[type="text"] {
   border: 2px solid gray;
   margin-bottom: 4px;

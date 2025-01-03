@@ -1,4 +1,4 @@
-"use client"; // Ensures compatibility with Next.js
+"use client";
 
 import { useState } from "react";
 import {
@@ -12,7 +12,6 @@ import {
 } from "@tanstack/react-table";
 import { Equipment } from "../app/types/types";
 
-// Initial Equipment Data
 const initialData: Equipment[] = [
   {
     id: "1",
@@ -46,7 +45,6 @@ const initialData: Equipment[] = [
   },
 ];
 
-// Define Column Configurations
 const columns: ColumnDef<Equipment>[] = [
   {
     accessorKey: "name",
@@ -103,7 +101,6 @@ const EquipmentTable = () => {
   const [data] = useState<Equipment[]>(initialData);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
 
-  // Create Table Instance
   const table = useReactTable({
     data,
     columns,
@@ -114,7 +111,6 @@ const EquipmentTable = () => {
     getFilteredRowModel: getFilteredRowModel(),
   });
 
-  // Filter by status
   const handleStatusFilterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setColumnFilters([
       { id: "status", value: event.target.value || "" },
@@ -166,8 +162,8 @@ const EquipmentTable = () => {
                   )}
                   <span>
                     {{
-                      asc: " 🔼", // Ascending indicator
-                      desc: " 🔽", // Descending indicator
+                      asc: " 🔼",
+                      desc: " 🔽",
                     }[header.column.getIsSorted() as string] ?? null}
                   </span>
                 </th>

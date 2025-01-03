@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form"; // Correct import for useForm
+import { useForm } from "react-hook-form";
 import { Equipment } from "../app/types/types";
 
 const equipmentSchema = z.object({
