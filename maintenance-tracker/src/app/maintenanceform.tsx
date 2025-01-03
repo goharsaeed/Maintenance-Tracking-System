@@ -31,7 +31,6 @@ export default function MaintenanceForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      {/* Equipment Field */}
       <div>
         <label htmlFor="equipmentId">Equipment</label>
         <select {...register("equipmentId")} id="equipmentId" className="border rounded p-2 w-full">
@@ -45,7 +44,6 @@ export default function MaintenanceForm() {
         )}
       </div>
 
-      {/* Date Field */}
       <div>
         <label htmlFor="date">Date</label>
         <input
@@ -59,7 +57,6 @@ export default function MaintenanceForm() {
         )}
       </div>
 
-      {/* Technician Field */}
       <div>
         <label htmlFor="technician">Technician</label>
         <input
@@ -73,7 +70,6 @@ export default function MaintenanceForm() {
         )}
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
